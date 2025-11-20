@@ -1,0 +1,318 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>ClinicMind Junior Data Scientist – Application Questions</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <style>
+    body {
+      font-family: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      margin: 0;
+      padding: 0;
+      background: #f3f4f6;
+      color: #111827;
+    }
+    .page {
+      max-width: 900px;
+      margin: 40px auto;
+      padding: 32px 24px 48px;
+      background: #ffffff;
+      border-radius: 18px;
+      box-shadow: 0 16px 40px rgba(15,23,42,0.12);
+      border: 1px solid #e5e7eb;
+    }
+    h1 {
+      font-size: 1.8rem;
+      margin-bottom: 0.25rem;
+      color: #111827;
+    }
+    .subtitle {
+      font-size: 0.95rem;
+      color: #6b7280;
+      margin-bottom: 1.5rem;
+    }
+    .qa-block {
+      margin-bottom: 1.1rem;
+      border-radius: 14px;
+      background: #f9fafb;
+      border: 1px solid #e5e7eb;
+      overflow: hidden;
+      transition: box-shadow 0.2s ease, border-color 0.2s ease, transform 0.1s ease;
+    }
+    .qa-block.open {
+      box-shadow: 0 14px 30px rgba(15,23,42,0.18);
+      border-color: #93c5fd;
+      transform: translateY(-1px);
+    }
+    .question-row {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 14px 18px;
+      cursor: pointer;
+      background: linear-gradient(to right, #eff6ff, #f9fafb);
+    }
+    .question {
+      font-weight: 600;
+      margin: 0;
+      color: #111827;
+      font-size: 0.98rem;
+    }
+    .arrow {
+      font-size: 1rem;
+      color: #2563eb;
+      transition: transform 0.2s ease;
+    }
+    .qa-block.open .arrow {
+      transform: rotate(90deg);
+    }
+    .content {
+      padding: 0 18px 14px;
+      max-height: 0;
+      overflow: hidden;
+      transition: max-height 0.25s ease;
+    }
+    .qa-block.open .content {
+      max-height: 600px; /* enough to show the whole answer */
+    }
+    .answer {
+      font-size: 0.95rem;
+      line-height: 1.55;
+      color: #374151;
+      padding-top: 10px;
+    }
+    .answer ul,
+    .answer ol {
+      padding-left: 1.3rem;
+    }
+    .pill-row {
+      margin-top: 0.4rem;
+      display: flex;
+      flex-wrap: wrap;
+      gap: 6px;
+    }
+    .pill {
+      font-size: 0.75rem;
+      padding: 3px 9px;
+      border-radius: 999px;
+      background: rgba(59,130,246,0.08);
+      border: 1px solid rgba(59,130,246,0.45);
+      color: #1d4ed8;
+    }
+    .note {
+      font-size: 0.8rem;
+      color: #6b7280;
+      margin-top: 24px;
+      border-top: 1px dashed #d1d5db;
+      padding-top: 8px;
+    }
+    @media (max-width: 640px) {
+      .page { margin: 16px; padding: 20px 16px 32px; }
+      .question { font-size: 0.9rem; }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <h1>ClinicMind – Junior Data Scientist Questions</h1>
+    <div class="subtitle">Candidate: <strong>Apurva Ravikar Chavan</strong></div>
+
+    <div class="qa-block open">
+      <div class="question-row">
+        <p class="question">1. Describe your experience with SQL. Include any examples of queries, data cleaning, or analysis tasks you have performed.</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          I have used SQL extensively for data exploration, cleaning, and feature preparation in analytics and machine learning projects. Typical work includes writing joins across multiple tables, using <code>GROUP BY</code>, window functions, and conditional logic for aggregations, and filtering noisy records before modeling.<br /><br />
+          For example, I have:
+          <ul>
+            <li>Joined transactional and dimension tables to create analysis-ready datasets for forecasting and reporting.</li>
+            <li>Created summary tables (daily/weekly aggregates) using window functions to compute rolling averages, lags, and growth metrics.</li>
+            <li>Performed data quality checks with <code>COUNT</code>, <code>DISTINCT</code>, and outlier checks to identify missing, duplicated, or inconsistent records before sending the data into Python pipelines.</li>
+          </ul>
+          In my recent work, SQL sits alongside Python (pandas) as part of the end-to-end workflow for extracting, cleaning, and validating data prior to modeling.
+          <div class="pill-row">
+            <span class="pill">Joins & aggregations</span>
+            <span class="pill">Window functions</span>
+            <span class="pill">Data quality checks</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">2. Describe any experience you have with Amazon QuickSight or other BI/dashboard tools.</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          While I have not yet used Amazon QuickSight specifically, I do have experience with BI and dashboard-style reporting using tools like Excel, Google Data Studio/Looker Studio, and Python-based dashboards.
+          I have built:
+          <ul>
+            <li>Interactive views of model performance and error metrics so stakeholders can understand where a model performs well or poorly.</li>
+            <li>Trend dashboards showing time-series behavior (for example, consumption or activity over time) with filters by segment or time window.</li>
+          </ul>
+          I am comfortable designing clear visual narratives (KPIs, trends, breakdowns), and I am confident I can quickly learn and adopt QuickSight, given my experience with SQL-backed reporting and visualization.
+          <div class="pill-row">
+            <span class="pill">Dashboard design</span>
+            <span class="pill">KPI tracking</span>
+            <span class="pill">Looker Studio / Python viz</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">3. What steps do you follow to ensure data quality, accuracy, and consistency?</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          I follow a structured process:
+          <ol>
+            <li><strong>Source & schema checks:</strong> Confirm table definitions, data types, and primary/foreign keys; verify that I understand how the data is generated.</li>
+            <li><strong>Sanity checks:</strong> Use SQL and Python (pandas) to check row counts, distinct keys, null distributions, and basic statistics to spot obvious anomalies.</li>
+            <li><strong>Business-rule validation:</strong> Verify that values make sense in context (for example, no negative counts where impossible, timestamps in valid ranges).</li>
+            <li><strong>Outlier and duplication checks:</strong> Identify outliers and duplicate records, and either correct, cap, or exclude them based on agreed rules.</li>
+            <li><strong>Reproducible cleaning pipeline:</strong> Implement the cleaning logic in reusable code (SQL scripts or Python functions) so the same steps run consistently for new data.</li>
+            <li><strong>Spot checks and peer review:</strong> Compare sample records before and after processing and, when possible, review assumptions with a domain expert or teammate.</li>
+          </ol>
+          This combination of technical checks and business validation helps keep the data consistent and trustworthy for analysis.
+          <div class="pill-row">
+            <span class="pill">Sanity checks</span>
+            <span class="pill">Reproducible pipelines</span>
+            <span class="pill">Business-rule validation</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">4. Have you worked with large datasets? If yes, describe the challenges you faced and how you handled them.</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          Yes, I have worked with large datasets both in industry and in academic projects. The main challenges were memory limits, slower query times, and ensuring that intermediate steps remained efficient.
+          <br /><br />
+          To handle this, I typically:
+          <ul>
+            <li>Push as much filtering and aggregation as possible into SQL so that Python only receives the reduced, relevant data.</li>
+            <li>Work with sampled subsets for rapid prototyping, then scale to full data once the logic is validated.</li>
+            <li>Use chunked processing and vectorized operations in pandas instead of row-by-row loops.</li>
+            <li>Cache intermediate results (for example, summary tables) to avoid recomputing heavy transformations repeatedly.</li>
+          </ul>
+          These approaches have helped keep workflows reliable and performant even when the raw data volume is large.
+          <div class="pill-row">
+            <span class="pill">Sampling & chunking</span>
+            <span class="pill">Push work to SQL</span>
+            <span class="pill">Vectorized operations</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">5. Describe a situation where you collaborated with a team to solve a problem. What was your role?</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          In a recent project, our team needed to design and evaluate an AI system that could make decisions in a multi-agent environment. I worked closely with other engineers and researchers to define the problem, understand the data we had, and design experiments.
+          <br /><br />
+          My role included:
+          <ul>
+            <li>Translating the high-level research idea into concrete data pipelines and model experiments in Python.</li>
+            <li>Running experiments, logging metrics, and summarizing results so the team could quickly see what was working.</li>
+            <li>Documenting the approach and sharing concise updates with the team, including trade-offs and next steps.</li>
+          </ul>
+          This experience reinforced the importance of clear communication, version control, and aligning technical work with the team’s shared goals.
+          <div class="pill-row">
+            <span class="pill">Cross-functional teamwork</span>
+            <span class="pill">Experiment design</span>
+            <span class="pill">Clear communication</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">6. How do you approach learning new tools, technologies, or analytical techniques?</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          My approach is structured and hands-on:
+          <ol>
+            <li><strong>Start with the overview:</strong> I first understand the problem the tool or technique is meant to solve and where it fits in the workflow.</li>
+            <li><strong>Official docs & quickstart:</strong> I go through the official documentation, quickstart guides, or a short course to learn the core concepts and best practices.</li>
+            <li><strong>Build a small, realistic example:</strong> I apply it to a small project or a subset of real data so I can see how it behaves in practice.</li>
+            <li><strong>Iterate and document:</strong> As I learn, I keep notes and code snippets, and I refactor the example into something reusable.</li>
+            <li><strong>Share and get feedback:</strong> When possible, I share what I learned with teammates, which helps solidify my understanding and improve our shared practices.</li>
+          </ol>
+          This method helps me learn new tools quickly while staying grounded in real-world use cases.
+          <div class="pill-row">
+            <span class="pill">Hands-on learning</span>
+            <span class="pill">Docs & quickstarts</span>
+            <span class="pill">Knowledge sharing</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">7. What is your current compensation and where do you see yourself in the next 5 years?</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          I am currently working as a Data Science / Machine Learning intern and compensated at an hourly intern rate. For a full-time Junior Data Scientist role, I am targeting a competitive package that reflects the market for early-career data professionals and the opportunity for growth and responsibility.
+          <br /><br />
+          Over the next five years, I see myself growing into a strong applied data scientist who can own end-to-end projects: understanding stakeholder requirements, designing data pipelines, building and evaluating models, and translating results into clear business impact. I hope to take on increasing responsibility, mentor newer team members, and contribute to building robust, data-informed decision-making processes in the organization.
+          <div class="pill-row">
+            <span class="pill">Early-career growth</span>
+            <span class="pill">End-to-end ownership</span>
+            <span class="pill">Mentorship & impact</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="qa-block">
+      <div class="question-row">
+        <p class="question">8. If we discover together that we are a good match - when would you be available to join our team?</p>
+        <span class="arrow">▶</span>
+      </div>
+      <div class="content">
+        <div class="answer">
+          I am flexible and would be able to join within approximately two weeks of receiving an offer, to allow for a smooth transition from my current commitments. If needed, I am happy to discuss specific timing so that it aligns well with your onboarding schedule.
+          <div class="pill-row">
+            <span class="pill">~2 weeks notice</span>
+            <span class="pill">Flexible start</span>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="note">
+      Note: You can lightly edit phrasing or timing (for example, notice period or compensation wording) before sending this text in your email reply.
+    </div>
+  </div>
+
+  <script>
+    document.querySelectorAll('.qa-block').forEach(function(block) {
+      const header = block.querySelector('.question-row');
+      header.addEventListener('click', function() {
+        block.classList.toggle('open');
+      });
+    });
+  </script>
+</body>
+</html>
